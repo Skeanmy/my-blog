@@ -6,24 +6,25 @@
       </div>
       <div class="nav right">
         <div class="search">
-          <Icon type="ios-search" />
           <input type="text" maxlength="30" placeholder="请输入查询内容..." class="s-inp">
+          <Icon type="ios-search" />
+          
         </div>
         <ul class="nav-bar">
           <li>
-            <a href=""><Icon type="ios-home" />首页</a>
+             <router-link to='/'><Icon type="ios-home" />首页</router-link>
           </li>
           <li class="sub-item">
             <Icon type="md-filing" />归档
             <ul class="nav-child">
               <li>
-                <a href=""><i></i>首页1</a>
+                <router-link to='/archives'>文章归档</router-link>
               </li>
               <li>
-                <a href=""><i></i>首页2</a>
+                <router-link to='/loveTips'>生活</router-link>
               </li>
               <li>
-                <a href=""><i></i>首页3</a>
+                <a href="">首页3</a>
               </li>
             </ul>
           </li>
@@ -51,10 +52,12 @@ export default {
 .header{
   height: 70px;
   width: 100%;
-  background-color: rgba(255, 255, 255, 0.94);
+  background-color: rgba(255, 255, 255, 1);
   position: fixed;
+  -webkit-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
   box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
   top: 0;
+  z-index: 1100;
 }
 .inner_header{
   width: 1080px;
@@ -105,7 +108,8 @@ export default {
   top: 100%;
   background: rgba(255, 255, 255, 0.94);
   z-index: 999;
-  -webkit-transition: all .3s ease-in-out; 
+  box-shadow: 0 0 10px 0 #cacaca;
+  -webkit-transition: all .4s ease-in-out; 
   transition: all .4s ease-in-out; 
 }
 .sub-item:hover{
@@ -113,16 +117,24 @@ export default {
   transition: 0.4s;
 }
 .sub-item:hover .nav-child{
-  opacity: 0.98;
-  transition: 0.4s;
+  opacity: 1;
+  transition: .4s;
   visibility: visible;
 }
 .nav-child a{
   width: 120px;
   height: 50px;
+  padding: 15px 20px;
   font-size: 14px;
   display: block;
-  line-height: 50px;
+  line-height: 20px;
+  z-index: 999;
+  background: rgba(255, 255, 255, 0.94);
+}
+.nav-child a:hover{
+  padding-left: 32px;
+  color: #eb5055;
+  transition: all .4s ease-in-out;
 }
 .search i{
   position: absolute;
@@ -156,7 +168,7 @@ export default {
   padding: 0 120px 0 40px;
   font-size: 12px;
   background-color: #fff;
-  z-index: 999;
+  z-index: 1100;
   transition: all .6s ease;
   outline: 0;
 }

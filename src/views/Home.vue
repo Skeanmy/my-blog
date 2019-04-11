@@ -18,222 +18,47 @@
     </div>
     <div class="article">
       <ul class="article_list">
-        <li class="cell">
+        <li class="cell" v-for="item in article_list" :key='item.id'>
           <a href=""></a>
           <div class="article-pannel">
             <div class="pannel-body">
-              <h3 class="title">ES6基本知识点，模块语法的总结</h3>
+              <h3 class="title">{{item.ctitle}}</h3>
               <p>
-                在开发app的过程中，起初我们刚刚起步的时候，追求的是能够使用各种轮子快速实现需求，渐渐的，我们的段位提升了，也有了新的追求，比如注重代码质量，如何写更好维护的代码，比如注重框架的扩展性等等。
+                {{item.cparagraph}}
               </p>
               <div class="info">
                 <Icon type="ios-chatbubbles-outline" />
-                <span>Skeamy</span>
-                <Icon type="ios-clock-outline" /><span>2019-04-10</span>
+                <span>{{item.name}}</span>
+                <Icon type="ios-clock-outline" /><span>{{item.date}}</span>
                 <div class="article-tag">
-                  <Tag color="volcano">volcano</Tag>
-                  <Tag color="orange">orange</Tag>
-                  <Tag color="gold">gold</Tag>
+                  <Tag color="volcano" v-for="tag in item.tags">{{tag}}</Tag>
                 </div>
               </div>
             </div>
             <div class="pannel-pic">
-            </div>
-          </div>
-        </li>
-        <li class="cell">
-          <a href=""></a>
-          <div class="article-pannel">
-            <div class="pannel-body">
-              <h3 class="title">ES6基本知识点，模块语法的总结</h3>
-              <p>
-                在开发app的过程中，起初我们刚刚起步的时候，追求的是能够使用各种轮子快速实现需求，渐渐的，我们的段位提升了，也有了新的追求，比如注重代码质量，如何写更好维护的代码，比如注重框架的扩展性等等。
-              </p>
-              <div class="info">
-                <Icon type="ios-chatbubbles-outline" />
-                <span>Skeamy</span>
-                <Icon type="ios-clock-outline" /><span>2019-04-10</span>
-                <div class="article-tag">
-                  <Tag checkable color="primary">标签一</Tag>
-                  <Tag checkable color="success">标签二</Tag>
-                  <Tag checkable color="error">标签三</Tag>
-                </div>
-              </div>
-            </div>
-            <div class="pannel-pic">
-              <img src="https://ask.qcloudimg.com/article-cover-image/2276093/jo9mi92ge8.jpg?imageView2/2/w/300">
-            </div>
-          </div>
-        </li>
-        <li class="cell">
-          <a href=""></a>
-          <div class="article-pannel">
-            <div class="pannel-body">
-              <h3 class="title">ES6基本知识点，模块语法的总结</h3>
-              <p>
-                在开发app的过程中，起初我们刚刚起步的时候，追求的是能够使用各种轮子快速实现需求，渐渐的，我们的段位提升了，也有了新的追求，比如注重代码质量，如何写更好维护的代码，比如注重框架的扩展性等等。
-              </p>
-              <div class="info">
-                <Icon type="ios-chatbubbles-outline" />
-                <span>Skeamy</span>
-                <Icon type="ios-clock-outline" /><span>2019-04-10</span>
-                <div class="article-tag">
-                  <Tag checkable color="primary">标签一</Tag>
-                  <Tag checkable color="success">标签二</Tag>
-                  <Tag checkable color="error">标签三</Tag>
-                </div>
-              </div>
-            </div>
-            <div class="pannel-pic">
-              <img src="https://ask.qcloudimg.com/article-cover-image/2276093/jo9mi92ge8.jpg?imageView2/2/w/300">
-            </div>
-          </div>
-        </li>
-        <li class="cell">
-          <a href=""></a>
-          <div class="article-pannel">
-            <div class="pannel-body">
-              <h3 class="title">ES6基本知识点，模块语法的总结</h3>
-              <p>
-                在开发app的过程中，起初我们刚刚起步的时候，追求的是能够使用各种轮子快速实现需求，渐渐的，我们的段位提升了，也有了新的追求，比如注重代码质量，如何写更好维护的代码，比如注重框架的扩展性等等。
-              </p>
-              <div class="info">
-                <Icon type="ios-chatbubbles-outline" />
-                <span>Skeamy</span>
-                <Icon type="ios-clock-outline" /><span>2019-04-10</span>
-                <div class="article-tag">
-                  <Tag checkable color="primary">标签一</Tag>
-                  <Tag checkable color="success">标签二</Tag>
-                  <Tag checkable color="error">标签三</Tag>
-                </div>
-              </div>
-            </div>
-            <div class="pannel-pic">
-              <img src="https://ask.qcloudimg.com/article-cover-image/2276093/jo9mi92ge8.jpg?imageView2/2/w/300">
-            </div>
-          </div>
-        </li>
-        <li class="cell">
-          <a href=""></a>
-          <div class="article-pannel">
-            <div class="pannel-body">
-              <h3 class="title">ES6基本知识点，模块语法的总结</h3>
-              <p>
-                在开发app的过程中，起初我们刚刚起步的时候，追求的是能够使用各种轮子快速实现需求，渐渐的，我们的段位提升了，也有了新的追求，比如注重代码质量，如何写更好维护的代码，比如注重框架的扩展性等等。
-              </p>
-              <div class="info">
-                <Icon type="ios-chatbubbles-outline" />
-                <span>Skeamy</span>
-                <Icon type="ios-clock-outline" /><span>2019-04-10</span>
-                <div class="article-tag">
-                  <Tag checkable color="primary">标签一</Tag>
-                  <Tag checkable color="success">标签二</Tag>
-                  <Tag checkable color="error">标签三</Tag>
-                </div>
-              </div>
-            </div>
-            <div class="pannel-pic">
-              <img src="https://ask.qcloudimg.com/article-cover-image/2276093/jo9mi92ge8.jpg?imageView2/2/w/300">
-            </div>
-          </div>
-        </li>
-        <li class="cell">
-          <a href=""></a>
-          <div class="article-pannel">
-            <div class="pannel-body">
-              <h3 class="title">ES6基本知识点，模块语法的总结</h3>
-              <p>
-                在开发app的过程中，起初我们刚刚起步的时候，追求的是能够使用各种轮子快速实现需求，渐渐的，我们的段位提升了，也有了新的追求，比如注重代码质量，如何写更好维护的代码，比如注重框架的扩展性等等。
-              </p>
-              <div class="info">
-                <Icon type="ios-chatbubbles-outline" />
-                <span>Skeamy</span>
-                <Icon type="ios-clock-outline" /><span>2019-04-10</span>
-                <div class="article-tag">
-                  <Tag checkable color="primary">标签一</Tag>
-                  <Tag checkable color="success">标签二</Tag>
-                  <Tag checkable color="error">标签三</Tag>
-                </div>
-              </div>
-            </div>
-            <div class="pannel-pic">
-              <img src="https://ask.qcloudimg.com/article-cover-image/2276093/jo9mi92ge8.jpg?imageView2/2/w/300">
-            </div>
-          </div>
-        </li>
-        <li class="cell">
-          <a href=""></a>
-          <div class="article-pannel">
-            <div class="pannel-body">
-              <h3 class="title">ES6基本知识点，模块语法的总结</h3>
-              <p>
-                在开发app的过程中，起初我们刚刚起步的时候，追求的是能够使用各种轮子快速实现需求，渐渐的，我们的段位提升了，也有了新的追求，比如注重代码质量，如何写更好维护的代码，比如注重框架的扩展性等等。
-              </p>
-              <div class="info">
-                <Icon type="ios-chatbubbles-outline" />
-                <span>Skeamy</span>
-                <Icon type="ios-clock-outline" /><span>2019-04-10</span>
-                <div class="article-tag">
-                  <Tag checkable color="primary">标签一</Tag>
-                  <Tag checkable color="success">标签二</Tag>
-                  <Tag checkable color="error">标签三</Tag>
-                </div>
-              </div>
-            </div>
-            <div class="pannel-pic">
-              <img src="https://ask.qcloudimg.com/article-cover-image/2276093/jo9mi92ge8.jpg?imageView2/2/w/300">
-            </div>
-          </div>
-        </li>
-        <li class="cell">
-          <a href=""></a>
-          <div class="article-pannel">
-            <div class="pannel-body">
-              <h3 class="title">ES6基本知识点，模块语法的总结</h3>
-              <p>
-                在开发app的过程中，起初我们刚刚起步的时候，追求的是能够使用各种轮子快速实现需求，渐渐的，我们的段位提升了，也有了新的追求，比如注重代码质量，如何写更好维护的代码，比如注重框架的扩展性等等。
-              </p>
-              <div class="info">
-                <Icon type="ios-chatbubbles-outline" />
-                <span>Skeamy</span>
-                <Icon type="ios-clock-outline" /><span>2019-04-10</span>
-                <div class="article-tag">
-                  <Tag checkable color="primary">标签一</Tag>
-                  <Tag checkable color="success">标签二</Tag>
-                  <Tag checkable color="error">标签三</Tag>
-                </div>
-              </div>
-            </div>
-            <div class="pannel-pic">
-              <img src="https://ask.qcloudimg.com/article-cover-image/2276093/jo9mi92ge8.jpg?imageView2/2/w/300">
-            </div>
-          </div>
-        </li>
-        <li class="cell">
-          <a href=""></a>
-          <div class="article-pannel">
-            <div class="pannel-body">
-              <h3 class="title">ES6基本知识点，模块语法的总结</h3>
-              <p>
-                在开发app的过程中，起初我们刚刚起步的时候，追求的是能够使用各种轮子快速实现需求，渐渐的，我们的段位提升了，也有了新的追求，比如注重代码质量，如何写更好维护的代码，比如注重框架的扩展性等等。
-              </p>
-              <div class="info">
-                <Icon type="ios-chatbubbles-outline" />
-                <span>Skeamy</span>
-                <Icon type="ios-clock-outline" /><span>2019-04-10</span>
-                <div class="article-tag">
-                  <Tag checkable color="primary">标签一</Tag>
-                  <Tag checkable color="success">标签二</Tag>
-                  <Tag checkable color="error">标签三</Tag>
-                </div>
-              </div>
-            </div>
-            <div class="pannel-pic">
-              <img src="https://ask.qcloudimg.com/article-cover-image/2276093/jo9mi92ge8.jpg?imageView2/2/w/300">
+              <img :src='item.image'>
             </div>
           </div>
         </li>
       </ul>
+    </div>
+    <div class="block-article">
+      <div class="image-inner">
+        <a href="">
+          <img src="http://www.zikaowang.cc/assets/img/gallery/gallery-5.jpg">
+        </a>
+        <p class="image-caption">#dddadasdad</p>
+      </div>
+      <div class="image-info">
+        <h5>ES6基本语法规则与大海ID还多大时代</h5>
+        <div class="writer">
+          <span>dasdada</span>
+          <span>2019-04-11</span>
+        </div>
+        <div class="desc">
+          Nunc velit urna, aliquam at interdum sit amet, lacinia sit amet ligula. Quisque et erat eros. Aenean auctor metus in tortor placerat, non luctus justo blandit.          
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -243,8 +68,16 @@ export default {
   name: 'Home',
   data () {
     return {
-      msg: 'this is home'
+      msg: 'this is home',
+      article_list: []
     }
+  },
+  created () {
+    this.$axios.get('https://www.easy-mock.com/mock/5bade7057502be612cc0d431/example/first')
+      .then(res=>{
+        console.log(res);
+        this.article_list = res.data.data.list;
+      })
   }
 }
 </script>
@@ -329,5 +162,27 @@ export default {
   width: 150px;
   height: 112px;
   right: 0;
+}
+.block-article{
+  width: 30%;
+}
+.image-inner{
+  position: relative;
+}
+.image-inner img{
+  height: 200px;
+  width: 100%;
+  border-radius: 3px;
+}
+.image-caption{
+  position: absolute;
+  top: 15px;
+  padding: 0 10px;
+  background-color: black;
+  color: white;
+}
+.image-info{
+    border: 1px solid;
+    padding: 5px 10px;
 }
 </style>
